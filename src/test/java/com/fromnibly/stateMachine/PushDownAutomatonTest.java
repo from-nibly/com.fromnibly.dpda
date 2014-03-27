@@ -1,11 +1,13 @@
-package com.fromnibly.pushdown;
+package com.fromnibly.stateMachine;
 
-public class Main
+import org.junit.Test;
+
+public class PushDownAutomatonTest
 {
 
-  public static void main(String[] args) throws Exception
+  @Test
+  public void test() throws Exception
   {
-
     PushDownAutomaton pda = new PushDownAutomaton(1);
 
     pda.from(0, 'a', 'z').To(0, "1z");
@@ -23,9 +25,6 @@ public class Main
     pda.from(0, 'λ', 'z').To(1, 'z');
 
     pda.read("acacbbcc");
-
-    System.out.println("success");
-
   }
 
 }
